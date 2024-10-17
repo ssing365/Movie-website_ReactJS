@@ -9,7 +9,10 @@ const Movie = ({ poster, title, synopsis, genres, id }) => {
       <h3>
         <Link to={`./movie/${id}`}>{title}</Link>
       </h3>
-      <p>synopsis : {synopsis ? synopsis : "none"}</p>
+      <p>
+        synopsis :{" "}
+        {synopsis.length > 235 ? `${synopsis.slice(0, 234)}...` : synopsis}
+      </p>
       <ul>
         {genres.map((genre) => (
           <li key={genre}>{genre}</li>
