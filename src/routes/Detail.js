@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Detail = () => {
   const { id } = useParams();
@@ -17,23 +17,25 @@ const Detail = () => {
   }, []);
   console.log(info);
 
-  //코드챌린지 
-  // nav bar에 home버튼 추가
-  // 
   return (
     <div>
+      <h1 >
+        <Link to={`/`} style={{textDecorationLine: 'none', color: 'inherit'}}> The Movies</Link>
+      </h1>
+      <hr />
+      <br />
       {loading ? (
         "Loading..."
       ) : (
         <div>
-            <img alt={`${info.movie.title}`}  src={`${info.movie.background_image}`}></img>
+          <img alt={`${info.movie.title}`} src={`${info.movie.background_image}`}></img>
           <h1>
             {info.movie.title}({info.movie.year})
           </h1>
-          
-          <strong>★ {info.movie.rating} / 10</strong>
+
+          <strong>★ {info.movie.rating} / 10 </strong>
           <h3>runtime: {info.movie.runtime} min</h3>
-          <b>{info.movie.genres.map(genre=> genre + '  ')}</b>
+          <b>{info.movie.genres.map(genre => genre + '  ')}</b>
           <p>{info.movie.description_intro}</p>
         </div>
       )}
