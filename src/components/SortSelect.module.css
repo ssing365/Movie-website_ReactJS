@@ -1,0 +1,15 @@
+.sort_span{
+    position: flex;
+    padding-right: 10px;
+  }
+  .sort_option {
+    position: flex;
+    width: 150px;
+    height: 30px;
+    border: groove;
+    font-size: medium;
+  }
+  
+  .sort_option:hover {
+    border: dashed;
+  }

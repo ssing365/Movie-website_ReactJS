@@ -1,0 +1,10 @@
+.page_btn {
+  background: inherit;
+  border: groove;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.page_btn:hover {
+  border: solid;
+}
