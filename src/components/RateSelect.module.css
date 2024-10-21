@@ -1,19 +1,20 @@
-.sort_select {
+.rate_select {
   display: inline-block;
+  margin-right: 20px;
 }
 
-.sort_span {
-  padding-right: 8px;
+.rate_span {
+  padding-right: 10px;
   font-weight: bold;
 }
 
-.sort_option {
-  width: 170px;
+.rate_option {
+  width: 100px;
   height: 30px;
   border: groove;
   font-size: medium;
 }
 
-.sort_option:hover {
+.rate_option:hover {
   border: dashed;
 }

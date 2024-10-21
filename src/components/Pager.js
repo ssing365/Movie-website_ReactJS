@@ -6,11 +6,13 @@ const Pager = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const page = Number(searchParams.get("page")) || 1;
   const sort = searchParams.get("sort") || "download_count";
+  const rate = searchParams.get("minimum_rating") || 7;
+
   const nextClick = () => {
-    setSearchParams({ sort, page: page + 1 });
+    setSearchParams({ sort, page: page + 1 , minimum_rating:rate});
   };
   const prevClick = () => {
-    setSearchParams({ sort, page: page - 1 });
+    setSearchParams({ sort, page: page - 1, minimum_rating:rate });
   };
   return (
     <div>

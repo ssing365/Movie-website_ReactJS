@@ -5,19 +5,20 @@ import Movie from "../components/Movie";
 import SortSelect from "../components/SortSelect";
 import Pager from "../components/Pager";
 import styles from "./Home.module.css";
+import RateSelect from "../components/RateSelect";
 
 const Home = () => {
   const [searchParams] = useSearchParams();
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
-  // 쿼리 파라미터에서 페이지와 정렬 기준을 불러옴
+  // 쿼리 파라미터에서 불러오기
   const page = Number(searchParams.get("page")) || 1;
   const sort = searchParams.get("sort") || "download_count";
+  const rate = searchParams.get("minimum_rating") || 7;
 
   const API = `https://yts.mx/api/v2/list_movies.json
-    ?minimum_rating=6.3
-    &limit=6&page=${page}&sort_by=${sort}`;
+    ?minimum_rating=${rate}&limit=8&page=${page}&sort_by=${sort}`;
   const getMovies = async () => {
     const json = await (await fetch(API)).json();
     setMovies(json.data.movies);
@@ -25,7 +26,7 @@ const Home = () => {
   };
   useEffect(() => {
     getMovies().catch((error) => console.log(error));
-  }, [page, sort]);
+  }, [page, sort, rate]);
 
   return (
     <div>
@@ -36,7 +37,8 @@ const Home = () => {
       </h1>
       <hr />
       <br />
-      <div className={styles.sort_select}>
+      <div className={styles.selection}>
+        <RateSelect />
         <SortSelect />
       </div>
       <div className={styles.container}>

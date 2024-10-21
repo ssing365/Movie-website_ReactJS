@@ -44,9 +44,9 @@
   font-size: x-large;
 }
 
-.sort_select {
-  position: absolute;
-  right: 1px;
-  height: 30px;
-  width: 270px;
+.selection{
+  position: flex;
+  justify-self: flex-end;
+  align-items: flex-end;
+  margin-right: 250px;
 }
