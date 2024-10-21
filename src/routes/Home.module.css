@@ -7,6 +7,8 @@
 .titleName {
   display: flex;
   justify-content: center;
+  text-decoration-line: none;
+  color: inherit;
 }
 
 .loader {
@@ -42,35 +44,9 @@
   font-size: x-large;
 }
 
-.page_btn {
-  background: inherit;
-  border: groove;
-  border-radius: 10px;
-  font-size: 20px;
-}
-
-.page_btn:hover {
-  border: solid;
-}
-
-.sort_select{
+.sort_select {
   position: absolute;
   right: 1px;
   height: 30px;
   width: 270px;
-}
-.sort_span{
-  position: flex;
-  padding-right: 10px;
-}
-.sort_option {
-  position: flex;
-  width: 150px;
-  height: 30px;
-  border: groove;
-  font-size: medium;
-}
-
-.sort_option:hover {
-  border: dashed;
 }

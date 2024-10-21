@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import styles from "./Home.module.css";
 
 const Detail = () => {
   const { id } = useParams();
@@ -15,12 +16,13 @@ const Detail = () => {
   useEffect(() => {
     getMovieInfo().catch((error) => console.log(error));
   }, []);
-  console.log(info);
 
   return (
     <div>
-      <h1 >
-        <Link to={`/`} style={{textDecorationLine: 'none', color: 'inherit'}}> The Movies</Link>
+      <h1>
+        <Link to={`/`} className={styles.titleName} style={{}}>
+          The Movies
+        </Link>
       </h1>
       <hr />
       <br />
@@ -28,14 +30,17 @@ const Detail = () => {
         "Loading..."
       ) : (
         <div>
-          <img alt={`${info.movie.title}`} src={`${info.movie.background_image}`}></img>
+          <img
+            alt={`${info.movie.title}`}
+            src={`${info.movie.background_image}`}
+          ></img>
           <h1>
             {info.movie.title}({info.movie.year})
           </h1>
 
           <strong>★ {info.movie.rating} / 10 </strong>
           <h3>runtime: {info.movie.runtime} min</h3>
-          <b>{info.movie.genres.map(genre => genre + '  ')}</b>
+          <b>{info.movie.genres.map((genre) => genre + "  ")}</b>
           <p>{info.movie.description_intro}</p>
         </div>
       )}

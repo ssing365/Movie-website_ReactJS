@@ -24,9 +24,9 @@ const Movie = ({ coverImg, title, summary, genres, year, id }) => {
 };
 
 Movie.propTypes = {
-  poster: PropTypes.string.isRequired,
+  coverImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  synopsis: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default Movie;
