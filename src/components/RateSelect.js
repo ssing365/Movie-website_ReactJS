@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./RateSelect.module.css";
 import { useSearchParams } from "react-router-dom";
+import styles from "./RateSelect.module.css";
 
 const RateSelect = () => {
   const [searchParams, setSearchParams] = useSearchParams();

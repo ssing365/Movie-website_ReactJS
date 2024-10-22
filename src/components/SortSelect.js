@@ -1,7 +1,6 @@
 import React from "react";
-import styles from "./SortSelect.module.css";
-
 import { useSearchParams } from "react-router-dom";
+import styles from "./SortSelect.module.css";
 
 const SortSelect = () => {
   const [searchParams, setSearchParams] = useSearchParams();

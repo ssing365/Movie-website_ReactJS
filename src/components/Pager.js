@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./Pager.module.css";
 import { useSearchParams } from "react-router-dom";
+import styles from "./Pager.module.css";
 
 const Pager = () => {
   const [searchParams, setSearchParams] = useSearchParams();
