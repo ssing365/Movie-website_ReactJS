@@ -1,6 +1,6 @@
 # Movie website (ReactJS)
 
-🚀 **Live Demo:** [[https://ssing365.github.io/movie_website](https://ssing365.github.io/movie_website/](https://ssing365.github.io/Movie-website_ReactJS/))]
+🚀 **Live Demo:** [[https://ssing365.github.io/Movie-website_ReactJS/](https://ssing365.github.io/Movie-website_ReactJS/)]
 
 
 
